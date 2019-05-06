@@ -969,37 +969,28 @@ client.on('message', message => {
         message.channel.send("** Your message has been sent📬 ** ")
             let embed = new Discord.RichEmbed()
 	    .setTitle(":gem: أوامر عامة :gem:")
-        .addField(":gem: +new ▬▬▬▬▬▬ لعمل تكت ","")
-        .addField(":gem: +close ▬▬▬▬▬▬  لغلق التكت","")
-        .addField(":gem: +bot ▬▬▬▬▬▬  معلومات البوت","")
-        .addField(":gem: +id ▬▬▬▬▬▬  معلومات الشخص","")
-        .addField(":crown: +kick ▬▬▬▬▬▬  للطرد شخص","")
-        .addField(":crown: +ban ▬▬▬▬▬▬  لتبنيد شخص","")
-        .addField(":crown: +mute ▬▬▬▬▬▬  اعطاء ميوت","")
-        .addField(":crown: +unmute ▬▬▬▬▬▬  فك الميوت","")
-	.addField(":gem: +server ▬▬▬▬▬▬  معلومات السيرفر","")
-	.addField(":gem: +members ▬▬▬▬▬▬  معلوما الاعضاء","")
-	.addField(":crown: +setstats ▬▬▬▬▬▬  معلومات عامة","") 
-	.addField(":crown: +setuser ▬▬▬▬▬▬  عددالاعضاء","")
-	.addField(":crown: +giveaway ▬▬▬▬▬▬ لعمل جيف اواى",")  
-	.addField(":gem: +buck ▬▬▬▬▬▬  لمعرفة رصيدك",")
-	.addField(":gem: +daily ▬▬▬▬▬▬  الجائزة اليومية","")
-	.addField(":crown: +ct ▬▬▬▬▬▬  عمل روم كتابى","")
-	.addField(":crown: +cv ▬▬▬▬▬▬  عمل روم صوتى","")
+        .addField(":gem: &new ▬▬▬▬▬▬ لعمل تكت ",'')
+        .addField(":gem: &close ▬▬▬▬▬▬  لغلق التكت",'')
+        .addField(":gem: &bot ▬▬▬▬▬▬  معلومات البوت",'')
+        .addField(":gem: &id ▬▬▬▬▬▬  معلومات الشخص",'')
+        .addField(":crown: &kick ▬▬▬▬▬▬  للطرد شخص",'')
+        .addField(":crown: &ban ▬▬▬▬▬▬  لتبنيد شخص",'')
+        .addField(":crown: &mute ▬▬▬▬▬▬  اعطاء ميوت",'')
+        .addField(":crown: &unmute ▬▬▬▬▬▬  فك الميوت",'')
+	.addField(":gem: &server ▬▬▬▬▬▬  معلومات السيرفر",'')
+	.addField(":gem: &members ▬▬▬▬▬▬  معلوما الاعضاء",'')
+	.addField(":crown: &setstats ▬▬▬▬▬▬  معلومات عامة",'') 
+	.addField(":crown: &setuser ▬▬▬▬▬▬  عددالاعضاء",'') 
+	.addField(":gem: &buck ▬▬▬▬▬▬  لمعرفة رصيدك",'')
+	.addField(":gem: &daily ▬▬▬▬▬▬  الجائزة اليومية",'')
+	.addField(":crown: &ct ▬▬▬▬▬▬  عمل روم كتابى",'')
+	.addField(":crown: &cv ▬▬▬▬▬▬  عمل روم صوتى",'')
+	.addField(":crown: &op ▬▬▬▬▬▬  فتح الشات",'') 
+	.addField(":crown: &cl ▬▬▬▬▬▬ غلق الشات",'') 
+	.addField(":crown: &setserver ▬▬▬▬▬▬  عدد اعضاء السيرفر",'')    
         .setColor('RANDOM')
         message.author.sendEmbed(embed);
     }
-});
-client.on('message',async msg => {//Toxic Codes
-  var p = "&";//Toxic Codes
-  if(msg.content.startsWith(p + "setbot")) {//Toxic Codes
-  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **ليس لديك صلاحيه**');//Toxic Codes
-  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');//Toxic Codes
-  msg.guild.createChannel(` Bot Count : ◤ → ${client.bot.size} ← ◢` , 'voice').then(time => {//Toxic Codes
-    });//Toxic Codes
-
-  }
- 
 });
 client.on('message',async msg => {//Toxic Codes
   var p = "&";//Toxic Codes
